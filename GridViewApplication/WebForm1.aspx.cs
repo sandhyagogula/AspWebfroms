@@ -23,6 +23,7 @@ namespace GridViewApplication
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
+
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM data", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
